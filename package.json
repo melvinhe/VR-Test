@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "aframe": "^1.4.1",
-    "aframe-scatterplot": "^1.0.3",
-    "d3": "^7.8.2"
-  }
-}
