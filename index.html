@@ -4,8 +4,25 @@
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene>
-      <a-entity environment="preset: forest; groundColor: #445; grid: cross"></a-entity>
-    </a-scene>
+    <a-entity environment="preset: forest; groundColor: #445; grid: cross">
+      <a-entity camera="userHeight: 1.6" look-controls wasd-controls></a-entity>
+
+      <a-entity id="player" position="0 1.6 0" rotation="0 0 0" scale="1 1 1">
+        <a-entity id="camera" camera="userHeight: 1.6" look-controls wasd-controls></a-entity>
+
+        <a-entity id="leftHand" hand-controls="hand: left" position="0.2 0 -0.2" rotation="0 0 0" scale="1 1 1"></a-entity>
+        <a-entity id="rightHand" hand-controls="hand: right" position="-0.2 0 -0.2" rotation="0 0 0" scale="1 1 1"></a-entity>
+
+        <a-entity id="leftController" oculus-touch-controls="hand: left" position="0.2 0 -0.2" rotation="0 0 0" scale="1 1 1"></a-entity>
+        <a-entity id="rightController" oculus-touch-controls="hand: right" position="-0.2 0 -0.2" rotation="0 0 0" scale="1 1 1"></a-entity>
+
+        <a-entity id="leftHandRay" raycaster="objects: .clickable" line="color: #FF0000; opacity: 1" position="0.2 0 -0.2" rotation="0 0 0" scale="1 1 1"></a-entity>
+        <a-entity id="rightHandRay" raycaster="objects: .clickable" line="color: #FF0000; opacity: 1" position="-0.2 0 -0.2" rotation="0 0 0" scale="1 1 1"></a-entity>
+
+        <a-entity id="leftControllerRay" raycaster="objects: .clickable" line="color: #FF0000; opacity: 1" position="0.2 0 -0.2" rotation="0 0 0" scale="1 1 1"></a-entity>
+        <a-entity id="rightControllerRay" raycaster="objects: .clickable" line="color: #FF0000; opacity: 1" position="-0.2 0 -0.2" rotation="0 0 0" scale="1 1 1"></a-entity>
+      </a-entity>
+
+    </a-entity>
   </body>
 </html>
